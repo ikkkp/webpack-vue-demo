@@ -1,6 +1,5 @@
 # 🚀 Welcome to your new awesome project!
 
-markdown
 # Webpack & Vue.js Example
 
 This project demonstrates how to set up a basic application using Webpack and Vue.js.
