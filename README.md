@@ -25,7 +25,7 @@ Make sure you have Node.js and npm installed on your system.
 3. Install dependencies:
 
    ```
-   npm install
+   pnpm install
    ```
 
 ## Usage
@@ -35,7 +35,7 @@ Make sure you have Node.js and npm installed on your system.
 To start the development server and see changes in real-time, run:
 
 ```
-npm run serve
+npm run dev
 ```
 
 This will start a local development server and you can view the application in your browser at `http://localhost:8080`.
@@ -45,7 +45,7 @@ This will start a local development server and you can view the application in y
 To build the project for production, use:
 
 ```
-npm run build
+npm run build:prod
 ```
 
 This will generate minified and optimized files in the `dist` directory.
@@ -75,10 +75,10 @@ export default {
 /* Add your styles here */
 </style>
 
+```
 
 ## License
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
-```
 
-In this README.md file, I've provided sections for installation, usage instructions (development and production), a basic example of a Vue component, and a license section. You can customize and expand this template further based on your specific project requirements.
+
