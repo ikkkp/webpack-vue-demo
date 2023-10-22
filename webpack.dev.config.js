@@ -5,7 +5,7 @@ const base = require('./webpack.base.config.js');
 module.exports = merge(base, {
     mode: 'development',
     devServer: {
-        port: 9000
+        port: 8080
     },
     output: {
         path: path.resolve(__dirname, 'dist'),
