@@ -1,17 +1,13 @@
 const path = require('path');
-const {
-    CleanWebpackPlugin
-} = require('clean-webpack-plugin');
-const {
-    merge
-} = require('webpack-merge');
+const {merge} = require('webpack-merge');
+const {CleanWebpackPlugin} = require('clean-webpack-plugin');
 const baseConfig = require('./webpack.base.config.js');
-const HtmlWebpackPlugin = require('html-webpack-plugin');
+
 
 module.exports = merge(baseConfig, {
     mode: 'production',
     output: {
-        filename: 'js/[name].[contenthash].js',
+        filename: '[name].[contenthash].js',
         path: path.resolve(__dirname, 'dist'),
         publicPath: './', // 可能需要根据你的部署需求调整这个配置
     },

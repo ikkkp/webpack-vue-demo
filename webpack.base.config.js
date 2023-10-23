@@ -23,7 +23,7 @@ module.exports = {
         vendor: './src/vendors.js'
     },
     output: {
-        filename: 'js/[name].[fullhash].js', // 使用 [fullhash] 替代 [hash]，这是新版本 webpack 的写法
+        filename: '[name].[fullhash].js', // 使用 [fullhash] 替代 [hash]，这是新版本 webpack 的写法
         path: path.join(__dirname, 'dist'),
         publicPath: './'
     },
