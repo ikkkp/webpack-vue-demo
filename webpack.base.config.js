@@ -11,6 +11,12 @@ const {
 } = require('unplugin-vue-components/resolvers')
 
 
+/**
+* @Description:entry入口配置vendor，Webpack会将Vue库打包成一个单独的文件，提高了网页加载性能
+* @Version:1.0
+* @Author:Huangzl
+* @Date:2023/10/23 09:06:50
+*/
 module.exports = {
     entry: {
         main: './src/main',
