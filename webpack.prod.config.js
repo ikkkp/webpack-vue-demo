@@ -11,6 +11,18 @@ module.exports = merge(baseConfig, {
         path: path.resolve(__dirname, 'dist'),
         publicPath: './', // 可能需要根据你的部署需求调整这个配置
     },
+    optimization: {
+        splitChunks: {
+            chunks: 'all', // 匹配所有类型的代码块，包括同步和异步模块
+            cacheGroups: {
+                vendor: {
+                    test: /[\\/]node_modules[\\/]/,
+                    name: 'vendors',
+                    chunks: 'all',
+                },
+            },
+        },
+    },
     plugins: [
         new CleanWebpackPlugin(), // 清理输出目录
 

@@ -12,18 +12,19 @@ const {
 
 
 /**
-* @Description:entry入口配置vendor，Webpack会将Vue库打包成一个单独的文件，提高了网页加载性能
-* @Version:1.0
-* @Author:Huangzl
-* @Date:2023/10/23 09:06:50
-*/
+ * @Description:entry入口配置vendor，Webpack会将Vue库打包成一个单独的文件，提高了网页加载性能
+ * @Version:1.0
+ * @Author:Huangzl
+ * @Date:2023/10/23 09:06:50
+ */
 module.exports = {
     entry: {
         main: './src/main',
+        test: './src/test',
         vendor: './src/vendors.js'
     },
     output: {
-        filename: '[name].[fullhash].js', // 使用 [fullhash] 替代 [hash]，这是新版本 webpack 的写法
+        filename: '[id].[fullhash].js', // 使用 [fullhash] 替代 [hash]，这是新版本 webpack 的写法
         path: path.join(__dirname, 'dist'),
         publicPath: './'
     },
@@ -47,7 +48,7 @@ module.exports = {
             }, {
                 test: /\.js$/,
                 loader: 'babel-loader',
-                exclude : /node_modules/,
+                exclude: /node_modules/,
 
             },
             {
@@ -75,5 +76,10 @@ module.exports = {
         Components({
             resolvers: [ElementPlusResolver()],
         }),
-    ]
+    ],
+    optimization: {
+        splitChunks: {
+            chunks: 'all',
+        },
+    },
 };
